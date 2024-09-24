@@ -1,0 +1,71 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Latar Belakang */
+body {
+    background-color: #f9f5f0; /* Krem lembut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #4a4a4a; /* Abu-abu tua */
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Judul */
+h1 {
+    font-size: 32px;
+    color: #344e41; /* Hijau gelap */
+    margin-bottom: 20px;
+}
+
+/* Galeri Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Item Galeri */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgb(0, 0, 0);
+    border: 2px solid #ffffff; /* Hijau mint */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efek Hover */
+.gallery-item:hover img {
+    transform: scale(0.9);
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
